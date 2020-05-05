@@ -1,0 +1,23 @@
+{
+  "name": "graphql_hello_world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "graphpack",
+    "build": "graphpack build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gr0ks/GraphQL_Hello_World.git"
+  },
+  "author": "Ilya Petrenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gr0ks/GraphQL_Hello_World/issues"
+  },
+  "homepage": "https://github.com/Gr0ks/GraphQL_Hello_World#readme",
+  "devDependencies": {
+    "graphpack": "^1.0.9"
+  }
+}

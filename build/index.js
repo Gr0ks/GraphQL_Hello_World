@@ -462,7 +462,7 @@ const resolvers = {
       email,
       age
     }, context, info) => {
-      let newUser = _db__WEBPACK_IMPORTED_MODULE_0__["users"].find(user => user.id === id);
+      let newUser = _db__WEBPACK_IMPORTED_MODULE_0__["users"].find(user => +user.id === +id);
       newUser.name = name;
       newUser.email = email;
       newUser.age = age;
@@ -471,7 +471,7 @@ const resolvers = {
     deleteUser: (parent, {
       id
     }, context, info) => {
-      const userIndex = _db__WEBPACK_IMPORTED_MODULE_0__["users"].findIndex(user => user.id === id);
+      const userIndex = _db__WEBPACK_IMPORTED_MODULE_0__["users"].findIndex(user => +user.id === +id);
       if (userIndex === -1) throw new Error("User not found.");
       const deletedUsers = _db__WEBPACK_IMPORTED_MODULE_0__["users"].splice(userIndex, 1);
       return deletedUsers[0];

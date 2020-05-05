@@ -18,7 +18,7 @@ const resolvers = {
       return newUser;
     },
     updateUser: (parent, { id, name, email, age }, context, info) => {
-      let newUser = users.find(user => user.id === id);
+      let newUser = users.find(user => +user.id === +id);
 
       newUser.name = name;
       newUser.email = email;
@@ -27,7 +27,7 @@ const resolvers = {
       return newUser;
     },
     deleteUser: (parent, { id }, context, info) => {
-      const userIndex = users.findIndex(user => user.id === id);
+      const userIndex = users.findIndex(user => +user.id === +id);
 
       if (userIndex === -1) throw new Error("User not found.");
 
